@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-param" content="authenticity_token" />
+    <link rel="icon" type="png/image" href="img/imp.png">
+    <title>CodePen - Fcc: Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <style>
+        body{
+            font-family:'Helvetica';
+            font-size: 20px;
+            background-color: powderblue;
+            max-width: 100%;
+        }    
+        header{
+           position:fixed;
+           top:0;
+           right:0;
+           left:0;
+           background-color: black;
+           height: 70px;
+        }
+        .bar{
+           float:right;
+           position: absolute;
+           top:10%;
+           right:1%;
+           font-size: 20px;
+        }
+        #fcc{
+           position: absolute;
+           top:2%;
+           left:5%;
+           font-size: 21px;
+       }
+       #pen{
+           position: absolute;
+           top:50%;
+           left:5%;
+           font-size: 13px;
+       }
+        #first{
+           width:150px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #second{
+           width:80px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #third{
+           width:100px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #fork{
+           width:100px;
+           height: 50px;
+           border:3px solid rgb(68, 66, 82);
+           background-color: black;
+           color: white; 
+       }
+       #img{
+           position: absolute;
+           top: 5%;
+           left: 2%;
+           background:none;
+           width: 2%;
+       }
+       #title{
+        margin-top: 8%;
+        margin-left: 40%;       }
+       fieldset{   
+        background-color: whitesmoke;
+        width:1000px;
+        height: 1100px;
+        border-radius: 5px;
+        margin-left: 4%;
+        margin-top: 2%;
+        max-width: 100%;
+       }
+       .tab{
+           width: 100%;
+           border-collapse: collapse;
+       }
+       #name,#email,#number,#role,#recommend,#dropdown,#future,#suggestions
+       {
+         margin-left:10%;
+       }
+       
+       #label{
+           text-align: end;
+           height: 50px;
+       }
+       #submit{
+           margin-top:2%;
+           margin-left:42% ;
+           background-color: skyblue;
+           color: white;
+           height: 50px;
+           width: 100px;
+           border: none;
+           border-radius: 8px;
+       }
+       @media 
+       only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+            header{
+                display: inline;
+            }
+            #first{
+                display: none;
+            }
+            #fork{
+                display:none;
+            }
+            #title{
+                margin-top: 16%;
+            }
+            td{
+                display: block;
+            }
+            #label
+            {
+                text-align: start;
+            }
+            #name,#email,#number,#role,#recommend,#dropdown,#future,#suggestions
+            {
+                margin: 0%;
+            }
+            .fieldset{
+                height: max-content;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="container-fluid">
+               <span><a href="#" style="text-decoration: none; color: white;border: 5px;border-color: rgb(85, 84, 84);"><img src="img/im.png" id="img" alt="fcc" width="30" height="30"><span><p id="fcc">FCC: Survey Form</p><br>
+                <p id="pen">
+                    A PEN BY freeCodeCamp
+                </p></span></a> 
+            </div>
+            <div class="bar">
+                <a href="#"><button id="fork">Fork</button></a>
+                <a href=""><button id="first">Change View</button></a>
+                <a href="#"><button id="second">Log In</button></a>
+                <a href="#"><button id="third">Sign up</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="title">
+                <h1 style="font-size:38px; font-weight:600;">Survey Form</h1>
+            </section>
+        </div>
+        <div class="container">
+            <fieldset class="fieldset">
+            <form id="survey-form" action="#">
+                <p id="description" style="padding-top:5%; text-align: center;">Let us know how we can improve freeCodeCamp</p>
+                <table class="tab">
+                    <tr>
+                        <td id="label"><label for="name">*Name:</label></td>
+                        <td><input type="text" id="name" placeholder="Enter your Name" style="width:280px; max-width: 100;"></td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="email">*Email:</label></td>
+                        <td><input type="email" id="email" placeholder="Enter your Email" style="width:280px;"></td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="number">*Age:</label></td>
+                        <td><input type="number" min="2" max="99" id="number" placeholder="Age" style="width:280px;"></td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="role">*What option best describes your current role?</label></td>
+                        <td>
+                            <select name="" id="role" style="width:150px; height: 35px;">
+                                <option selected value="">Student</option>
+                                <option value="">Graduate</option>
+                                <option value="">Civil Servant</option>
+                                <option value="">Private Employee</option>
+                                <option value="">Self Employed</option>
+                                <option value="">Business Personel</option>
+                                <option value="">Artisan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="recommend">*How likely is that you would recommend <br> freeCodeCamp to a friend?</label></td>
+                        <td>
+                            <input type="radio" name="Decision" id="recommend" style="margin-top: 5%;">Definitely <br>
+                            <input type="radio" name="Decision" id="recommend">Maybe <br>
+                            <input type="radio" name="Decision" id="recommend">Not sure <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="dropdown">What do you like most in FCC</label></td>
+                        <td>
+                            <select name="" id="dropdown" style="height:35px;width:150px">
+                                <option value="">Challenges</option>
+                               <option value="">Projects</option>
+                               <option value="">Community</option>
+                               <option value="">Open source</option>
+                           </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="label"><label for="future">Things that should be improved in future <br> (check all that apply)</label></td>
+                        <td>
+                            <input type="checkbox" name="check" id="future">Front-end Projects <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>    
+                            <input type="checkbox" name="check" id="future">Back-end Projects <br>
+                            <input type="checkbox" name="check" id="future">Data Visualization <br>
+                            <input type="checkbox" name="check" id="future">Challenges <br>
+                            <input type="checkbox" name="check" id="future">Open Source Community <br>
+                            <input type="checkbox" name="check" id="future">Gitter help rooms <br>
+                            <input type="checkbox" name="check" id="future">Videos <br>
+                            <input type="checkbox" name="check" id="future">City Meetups <br>
+                            <input type="checkbox" name="check" id="future">Wiki <br>
+                            <input type="checkbox" name="check" id="future">Forum <br>
+                         <input type="checkbox" name="check" id="future">Additional Courses <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="label" ><label for="suggestions">Any Comments or Suggestions?</label></td>
+                        <td><textarea style="margin-top:10%;" name="" id="suggestions" cols="28" rows="3" placeholder="Enter your comment here..."></textarea><br></td>
+                    </tr>
+                </table>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </fieldset>
+        </div>
+        
+    </main>
+</body>
+</html>
