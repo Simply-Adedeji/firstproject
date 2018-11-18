@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="png/image" href="img/imp.png">
+    <title>CodePen - FCC:Product Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+         header{
+           position:fixed;
+           top:0;
+           right:0;
+           left:0;
+           background-color: black;
+           height: 70px;
+       }
+       #img{
+           position: absolute;
+           top: 5%;
+           left: 2%;
+           background:none;
+           width: 2%;
+
+       }
+       .container-fluid{
+           float: left;
+       }
+       .bar{
+           float:right;
+           position: absolute;
+           top:10%;
+           right:1%;
+           font-size: 20px;
+        }
+       #fcc{
+           position: absolute;
+           top:2%;
+           left:5%;
+           font-size: 21px;
+       }
+       #pen{
+           position: absolute;
+           top:50%;
+           left:5%;
+           font-size: 13px;
+       }
+       #first{
+           width:150px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+        
+       }
+       #second{
+           width:80px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #third{
+           width:100px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #fork{
+           width:100px;
+           height: 50px;
+           border:3px solid rgb(68, 66, 82);
+           background-color: black;
+           color: white; 
+       }
+       @media 
+       only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+            header{
+                display: inline;
+            }
+            #first{
+                display: none;
+            }
+            #fork{
+                display:none;
+            }
+            .navigate{
+                position: fixed;
+                top: 8%;
+                right: 0%;
+                left: 0%;
+                z-index: 1;
+            }
+            main{
+                margin-top: 22%;
+            }
+            #nav1{
+                top:40%;
+                left: 5%;
+            }
+            #nav2{
+                top:40%;
+                left:25%;
+            }
+            #nav3{
+                top: 40%;
+                left:60%;
+            }
+            #video{
+                margin-left: 0%;
+            }
+            .fullcard{
+                flex-direction: column;
+            }
+           
+        }
+        main{
+           padding: 11%;
+           font-family: Arial;
+           background-color: whitesmoke;
+       }
+       #header-img{
+           width: 400px;
+           height: 40px;
+       }
+       nav{
+           float: right;
+           font-family: 'calibri';
+           font-size: 20px;
+           z-index: 9999;
+       }
+       #nav1{
+           position:absolute;
+           right: 28%;
+           text-decoration: none;
+           color:black;
+       }
+       #nav2{
+           position: absolute;
+           right: 14%;
+           text-decoration: none;
+           color:black;
+       }
+       #nav3{
+           position:absolute;
+           right: 5%;
+           text-decoration: none;
+           color:black;
+       }
+       .navigate{
+           background-color: whitesmoke;
+           height:80px;
+           margin-top: 5%;
+           z-index: 999999;
+       }
+       form{
+           text-align: center;
+       }
+       #submit{
+           width: 180px;
+           background-color: rgb(245, 209, 3);
+            color: black;
+           border: none;
+           border-radius: 3px;
+           margin-top: 10px;
+           font-family: 'Arial';
+           font-weight: 800;
+           font-size: 18px;
+       }
+       button:hover{
+           animation-name:background-color;
+           animation-duration:1s;
+           animation-fill-mode: forwards;
+       }
+       @keyframes background-color {
+           100%{
+               background-color:rgb(245, 154, 18);
+           }
+       }
+       table{
+           margin-top: 4%;
+           width: 100%;
+           padding-left: 10%;
+       }
+       #p{
+           font-size: 30px;
+           font-family: 'calibri';
+           font-weight: bold;
+       }
+       iframe{
+           margin-top: 3%;
+           margin-left: 25%;
+           max-width: 100%;
+       }
+       #video{
+           max-width: 100%;
+       }
+        .fullcard {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5%;
+            margin-bottom: -5px;
+            width:100%;
+            height: 100%;
+        }
+       .card {
+            background: whitesmoke;
+            border-radius: 3px;
+            box-shadow: 0px 1px 1px transparent;
+            flex: 1;
+            margin: 8px;
+            padding: 5px;
+            position:inherit;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+        }
+        h6{
+            font-weight: bold;
+            height: 50px;
+            padding-top: 10px;
+        }
+        #button2{
+            margin-top: 6%;
+            height: 40px;
+            width: 100px;
+           background-color: rgb(245, 209, 3);
+            color: black;
+           border: none;
+           border-radius: 3px;
+           margin-top: 10px;
+           font-family: 'Arial';
+           font-size: 18px;
+        }
+        footer{
+            background-color: whitesmoke;
+        }
+        .content{
+            background-color: lightgray;
+            height: 50px;
+        }
+        #contents{
+            float: right;
+            text-decoration: none;
+            color: black;
+            padding-right: 5px;
+        }
+        .p{
+            margin-right: 1%;
+        }
+        .t{
+            margin-right: 2%;
+        }
+        .c{
+            margin-right: 3%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <div class="container-fluid">
+               <span><a href="#" style="text-decoration: none; color: white;border: 5px;border-color: rgb(85, 84, 84);"><img src="img/im.png" id="img" alt="fcc" width="30" height="30"><span><p id="fcc">FCC: Tribute Page</p><br>
+                <p id="pen">
+                    A PEN BY freeCodeCamp
+                </p></span></a> 
+            </div>
+            <div class="bar">
+                <a href="#"><button id="fork">Fork</button></a>
+                <a href=""><button id="first">Change View</button></a>
+                <a href="#"><button id="second">Log In</button></a>
+                <a href="#"><button id="third">Sign up</button></a>
+            </div>
+            <div class="navigate">
+                <img src="img/trom.png" alt="trombone" id="header-img">
+                <nav>
+                    <a id="nav1" class="nav-link" href="#premium">Features</a>
+                    <a id="nav2" class="nav-link" href="#video">How It Works</a>
+                    <a id="nav3" class="nav-link" href="#button2">Pricing</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="form" action="">
+            <p id="p">Handcrafted home-made masterpieces</p>
+            <input type="email" id="email" placeholder="Enter your email address" style="width:300px"><br>
+            <button id="submit">GET STARTED</button>
+        </form>
+        <table>
+            <tr>
+                <td style="width:150px; height:150px;"><img src="img/flame.png" alt="premium" height="50" width="35" id="premium"></td>
+                <td style="font-size:18px;">
+                    <b style="font-size:30px;font-family: calibri;">Premium Materials</b><br> Our trombones use the shiniest brass which is sourced locally. 
+                    This will increase the longevity of your purchase.
+                </td>
+            </tr>
+            <tr>
+                <td style="height:150px;"><img src="img/transport.png" alt="shipment" height="50" width="35"id="fast"></td>
+                <td style="font-size:18px;">
+                    <b style="font-size:30px;font-family: calibri;">Fast Shipping</b><br> We make sure you recieve your trombone as soon as we have finished making it.
+                    We also provide free returns if you are not satisfied.
+                </td>
+            </tr>
+            <tr>
+                <td style="height:150px;"><img src="img/battery.png" alt="battery" height="30" width="55"id="quality"></td>
+                <td style="font-size:18px;">
+                    <b style="font-size:30px;font-family: calibri;">Quality Assurance</b><br>  For every purchase you make, we will ensure there are no damages 
+                    or faults and we will check and test the pitch of your instrument.
+                </td>
+            </tr>
+        </table>
+        <iframe width="600" height="390" src="https://www.youtube.com/embed/y8Yv4pnO7qc" id="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="fullcard" id="thumbnail">
+            <div class="card">
+               <div class="card-header">
+                    <h6>TENOR TROMBONE</h6>
+               </div>
+                <div class="card-body">
+                     <h3>$600</h3>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                    </div>
+                    <div class="cardaction">
+                        <button id="button2">SELECT</button>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <h6>BASS TROMBONE</h6>
+                </div>
+                <div class="card-body">
+                     <h3>$900</h3>
+                    <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                    <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                    <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                    <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                </div>
+                <div class="cardaction">
+                    <button id="button2">SELECT</button>
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-header">
+                        <h6>VALVE TROMBONE</h6>
+                    </div>
+                    <div class="card-body">
+                         <h3>$1200</h3>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                        <p style="font-size:18px;">Lorem ipsum, dolor</p>
+                    </div>
+                    <div class="cardaction">
+                        <button id="button2">SELECT</button>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="content">
+                <a href="#" class="p" id="contents">Privacy</a>
+                <a href="#" class="t" id="contents">Terms</a>
+                <a href="#" class="c" id="contents">Contact</a><br>
+                <p id="contents">Copyright 2016, Original Trombones</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
