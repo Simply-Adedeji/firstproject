@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="png/image" href="img/imp.png">
+    <title>CodePen - FCC:Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=550px" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <style>
+           header{
+           position:fixed;
+           top:0;
+           right:0;
+           left:0;
+           background-color: black;
+           height: 70px;
+       }
+       #img{
+           position: absolute;
+           top: 5%;
+           left: 2%;
+           background:none;
+           width: 2%;
+
+       }
+       .container-fluid{
+           float: left;
+       }
+       .bar{
+           float:right;
+           position: absolute;
+           top:10%;
+           right:1%;
+           font-size: 20px;
+        }
+       #fcc{
+           position: absolute;
+           top:2%;
+           left:5%;
+           font-size: 21px;
+       }
+       #pen{
+           position: absolute;
+           top:50%;
+           left:5%;
+           font-size: 13px;
+       }
+       #first{
+           width:150px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+        
+       }
+       #second{
+           width:80px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #third{
+           width:100px;
+           height: 50px;
+           border: none;
+           border-radius: 5px;
+           background: rgb(68, 66, 82);
+           color: white;
+       }
+       #fork{
+           width:100px;
+           height: 50px;
+           border:3px solid rgb(68, 66, 82);
+           background-color: black;
+           color: white; 
+       }
+       @media 
+       only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+            header{
+                display: inline;
+            }
+            #first{
+                display: none;
+            }
+            #fork{
+                display:none;
+            }
+            .navigate{
+                position: fixed;
+                top: 10%;
+                right: 0%;
+                left: 0%;
+                z-index: 1;
+            }
+            #nav1{
+                margin-top:-18%;
+                left: 5%;
+            }
+            #nav2{
+                margin-top:-18%;
+                left:35%;
+            }
+            #nav3{
+                margin-top:-18%;
+                left:60%;
+            }
+            main{
+               margin: -20%;
+            }
+            .projects{
+                flex-direction: column;
+    
+            }
+            .contact{
+                flex-direction: column;
+                justify-content: center;;
+            }
+            fieldset{
+                margin-left:-100px;
+            }
+            .butt{
+                margin-left:-100px;
+            }
+            body{
+                overflow-x: hidden;
+            }
+        }
+        main{
+           margin-top:10.8%;
+           font-family: 'Arial';
+           overflow-x: hidden;
+       }
+       nav{
+           float: right;
+           font-family: 'calibri';
+           font-size: 22px;
+       }
+       #nav1{
+           position:absolute;
+           right: 28%;
+           top: 120%;
+           text-decoration: none;
+           color:teal;
+       }
+       #nav2{
+           position: absolute;
+           right: 17%;
+           top: 120%;
+           text-decoration: none;
+           color:teal;
+       }
+       #nav3{
+           position:absolute;
+           right: 5%;
+           top: 120%;
+           text-decoration: none;
+           color:teal;
+       }
+       .navigate{
+           background-color: rgb(219, 231, 222);
+           height:80px;
+           margin-top: 5%;
+           z-index: 999999;
+       }
+       #welcome-section{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           flex-grow: 1;
+           min-height: 350px;
+           background-color: rgb(219, 231, 222);
+           height: 550px;
+       }
+       #heading{
+           padding-top: 16%;
+       }
+       fieldset{
+           border: 2px solid skyblue;
+           width: 305px;
+           text-align: center;
+       }
+       figcaption{
+           padding: 10px;
+           font-weight: bold;
+           color: teal;
+           font-size: 18px;
+       }
+       #p{
+           color: green;
+       }
+       .projects{
+           display: flex;
+           flex-wrap: wrap;
+          justify-content: center;
+           max-width: 100%;
+           width: 100%;
+           height: 100%;
+           padding-left:250px;
+           padding-right: 250px;
+       }
+       .project-tile{
+           padding-top: 30px; 
+           margin: 50px auto;
+       }
+       #p2{
+           color: teal;
+           font-size: 28px;
+           text-align: center;
+           padding-top: 35px;
+       }
+       #butt{
+           width: 200px;
+           height: 45px;
+           padding: 5px;
+           border: 1.5px solid rgb(136, 219, 136);
+           border-radius: 5px;
+           font-weight: bold;
+           background-color: rgb(219, 231, 222);
+           color: teal;
+           margin-left: 43%;
+           margin-right: 43%;
+           margin-bottom: 100px;
+           font-size: 18px;
+       }
+       #contact{
+           background-color: #C8F7C5;
+       }
+       .logo1,.logo2,.logo3,.logo4,.logo5{
+           width: 120px;
+           height: 120px;
+           border: 1.5px solid rgb(136, 219, 136);
+           background-color: rgb(219, 231, 222);
+           color: teal;
+           font-weight: bold;
+           font-size: 18px;
+           border-radius: 50%;
+           text-align: center;
+           padding-top: 45px;
+           margin-right: 70px;
+       }
+       .contact{
+           display: flex;
+           flex-wrap: wrap;
+           align-content: center;
+           margin-left: 220px;
+           padding-top: 100px;
+           padding-bottom: 150px;
+       }
+       #title{
+           padding-top: 180px;
+           text-align: center;
+       }
+       footer{
+           background-color:#22313F;
+           height: 100px;
+           text-align: center;
+           color: white;
+           padding-top: 20px;
+       }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <div class="container-fluid">
+               <span><a href="portfolio.html" style="text-decoration: none; color: white;border: 5px;border-color: rgb(85, 84, 84);"><img src="img/im.png" id="img" alt="fcc" width="30" height="30"><span><p id="fcc">FCC: Portfolio </p><br>
+                <p id="pen">
+                    A PEN BY freeCodeCamp
+                </p></span></a> 
+            </div>
+            <div class="bar">
+                <a href="#"><button id="fork">Fork</button></a>
+                <a href=""><button id="first">Change View</button></a>
+                <a href="#"><button id="second">Log In</button></a>
+                <a href="#"><button id="third">Sign up</button></a>
+            </div>
+            <div class="navigate">
+                <nav>
+                    <a id="nav1" class="nav-link" href="#welcome-section">About</a>
+                    <a id="nav2" class="nav-link" href="#projects">Work</a>
+                    <a id="nav3" class="nav-link" href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section id="welcome-section">
+            <h1 id="heading">Hey i'am Fatai</h1>
+            <p id="p">a web developer</p>
+        </section>
+        <section id="projects">
+                <p id="p2">These are some of my projects...</p>
+            <div class="projects">
+                <div class="project-tile" id="tile1">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                            <img src="img/Norman.png" alt="Tribute page" width="300" height="200">
+                        </fieldset>
+                        <fieldset><figcaption>Tribute Page</figcaption></fieldset>
+                    </a>
+                </div>
+                <div class="project-tile" id="tile2">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                        <img src="img/landing.png" alt="landing page" width="300" height="200">
+                        </fieldset>
+                        <fieldset><figcaption>Product Landing Page</figcaption></fieldset>
+                    </a> 
+                </div>
+                <div class="project-tile" id="tile3">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                        <img src="img/map.png" alt="map" width="300" height="200">
+                        </fieldset>
+                        <fieldset><figcaption>Map Data Across Nigeria</figcaption></fieldset>
+                    </a>
+                </div>
+                <div class="project-tile" id="tile4">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                            <img src="img/form.png" alt="Tribute page" width="300" height="200">
+                         </fieldset>
+                        <fieldset><figcaption>Classic Form</figcaption></fieldset>    
+                        </div>
+                    </a>
+                <div class="project-tile" id="tile5">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                            <img src="img/coded.png" alt="Tribute page" width="300" height="200">
+                        </fieldset>
+                        <fieldset><figcaption>Online Bank</figcaption></fieldset> 
+                    </a>
+                </div>
+                <div class="project-tile" id="tile6">
+                    <a href="https://github.com/Simply-Adedeji">
+                        <fieldset>
+                            <img src="img/geo.png" alt="Tribute page" width="300" height="200">
+                        </fieldset>
+                        <fieldset><figcaption>Flood Mapper</figcaption></fieldset>
+                    </a>    
+                </div>
+            </div>
+            <div class="butt">
+                <button id="butt">Show all</button> 
+            </div>  
+        </section>
+        <section id="contact">
+            <div id="title">
+                <h1>Let's work together...</h1>
+                <p>How do you like your coffee</p>
+            </div>
+            <div class="contact">
+                <a href="#"><p class="logo1" id="fb">Facebook</p></a>
+                <a href="https://github.com/Simply-Adedeji"><p class="logo2" id="profile-link">GitHub</p></a>
+                <a href="#"><p class="logo3" id="twi">Twitter</p></a>
+                <a href="#"><p class="logo4" id="mail">Send a mail</p></a>
+                <a href="#"><p class="logo5" id="call">Call me</p></a>  
+            </div>
+        </section>
+    </main>
+    <footer>
+        **This is just a fake portfolio.. All the projects and contact details given are not real..
+        <p>&copy 2018 Fatai's Portfolio</p>
+    </footer>
+</body>
+</html> 
